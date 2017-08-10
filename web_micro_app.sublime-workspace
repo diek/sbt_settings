@@ -1,0 +1,783 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"us",
+				"users_blueprint\tstatement"
+			],
+			[
+				"from",
+				"from_object"
+			],
+			[
+				"app",
+				"app_settings\tstatement"
+			],
+			[
+				"use",
+				"users"
+			],
+			[
+				"Te",
+				"TextTestRunner\tclass"
+			],
+			[
+				"Tes",
+				"TestLoader\tclass"
+			],
+			[
+				"lo",
+				"loads\tfunction"
+			],
+			[
+				"B",
+				"BaseTestCase\tclass"
+			],
+			[
+				"un",
+				"unittest\tmodule"
+			],
+			[
+				"a",
+				"assertFalse"
+			],
+			[
+				"ass",
+				"assertTrue"
+			],
+			[
+				"u",
+				"users-db"
+			],
+			[
+				"ut",
+				"utcnow\tfunction"
+			],
+			[
+				"da",
+				"datetime\tclass"
+			],
+			[
+				"em",
+				"email_msg\tstatement"
+			],
+			[
+				"end",
+				"end_date\tstatement"
+			],
+			[
+				"st",
+				"start_date\tstatement"
+			],
+			[
+				"cont",
+				"content_subtype\tparam"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"shif",
+				"shift_period"
+			],
+			[
+				"sh",
+				"shift_period"
+			],
+			[
+				"to",
+				"to_email\tparam"
+			],
+			[
+				"email",
+				"email_message"
+			],
+			[
+				"loca",
+				"location_email\tstatement"
+			],
+			[
+				"loc",
+				"location_email\tstatement"
+			],
+			[
+				"se",
+				"send_schedules\tfunction"
+			],
+			[
+				"fr",
+				"from_email\tstatement"
+			],
+			[
+				"stor",
+				"store_schedules\tfunction"
+			],
+			[
+				"T",
+				"THIRD_PARTY\tstatement"
+			],
+			[
+				"hel",
+				"help_genre"
+			],
+			[
+				"statu",
+				"status_help"
+			],
+			[
+				"help",
+				"help_text"
+			],
+			[
+				"ur",
+				"urlpatterns\tstatement"
+			],
+			[
+				"shi",
+				"shift__job__isnull"
+			],
+			[
+				"f",
+				"filter"
+			],
+			[
+				"qu",
+				"queryset"
+			],
+			[
+				"mem",
+				"memcache"
+			],
+			[
+				"min",
+				"min_price\tstatement"
+			],
+			[
+				"stoc",
+				"stock_prices_yesterday\tstatement"
+			],
+			[
+				"in",
+				"index\tforstmt"
+			],
+			[
+				"for",
+				"format\tfunction"
+			],
+			[
+				"i",
+				"iterkeys\tfunction"
+			],
+			[
+				"v",
+				"value\tstatement"
+			],
+			[
+				"C",
+				"CORE_APPS\tstatement"
+			],
+			[
+				"ne",
+				"next_employee\tstatement"
+			],
+			[
+				"R",
+				"ReportForm\tclass"
+			],
+			[
+				"en",
+				"enable_nav"
+			],
+			[
+				"prev",
+				"previous_employee\tstatement"
+			],
+			[
+				"pre",
+				"previous_employee\tstatement"
+			],
+			[
+				"dic",
+				"dict_\tstatement"
+			],
+			[
+				"cl",
+				"cleaned_data"
+			],
+			[
+				"fi",
+				"fields"
+			],
+			[
+				"emp",
+				"employee"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/diek/code/web_micro_app/project/api/views.py",
+			"settings":
+			{
+				"buffer_size": 581,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# manage.py\n\nimport unittest\n\nfrom flask_script import Manager\n\nfrom project import create_app, db\nfrom project.api.models import User\n\napp = create_app()\nmanager = Manager(app)\n\n\n@manager.command\ndef test():\n    \"\"\"Run the tests without code coverage.\"\"\"\n    tests = unittest.TestLoader().discover('project/tests', pattern='test*.py')\n    result = unittest.TextTestRunner(verbosity=2).run(tests)\n    if result.wasSuccessful():\n        return 0\n    return 1\n\n\n@manager.command\ndef recreate_db():\n    \"\"\"Recreate a database.\"\"\"\n    db.drop_all()\n    db.create_all()\n    db.session.commit()\n\n\nif __name__ == '__main__':\n    manager.run()\n",
+			"file": "/Users/diek/code/web_micro_app/manage.py",
+			"file_size": 636,
+			"file_write_time": 131450569310000000,
+			"settings":
+			{
+				"buffer_size": 636,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/diek/code/web_micro_app/project/tests/test_users.py",
+			"settings":
+			{
+				"buffer_size": 1424,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"last_filter": "pac",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/diek/code/web_micro_app",
+		"/Users/diek/code/web_micro_app/project",
+		"/Users/diek/code/web_micro_app/project/api",
+		"/Users/diek/code/web_micro_app/project/tests"
+	],
+	"file_history":
+	[
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/web_micro_app.sublime-project",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/diek/.config/flake8",
+		"/Users/diek/code/web_micro_app/README.md",
+		"/Users/diek/.gitmessage",
+		"/Users/diek/code/web_micro_app/project/tests/base.py",
+		"/Users/diek/code/web_micro_app/m2.py",
+		"/Users/diek/code/web_micro_app/project/api/views.py",
+		"/Users/diek/code/web_micro_app/project/api/models.py",
+		"/Users/diek/code/web_micro_app/project/__init__.py",
+		"/Users/diek/code/web_micro_app/manage.py",
+		"/Users/diek/code/web_micro_app/project/tests/test_config.py",
+		"/Users/diek/code/web_micro_app/project/api/__init__.py",
+		"/Users/diek/code/web_micro_app/project/tests/test_users.py",
+		"/Users/diek/code/web_micro_app/project/config.py",
+		"/Users/diek/code/web_micro_app/project/tests/__init__.py",
+		"/Users/diek/code/web_micro_app/project/db/Dockerfile",
+		"/Users/diek/code/web_micro_app/docker-compose.yml",
+		"/Users/diek/.gitignore_global",
+		"/Users/diek/code/web_micro_app/docker-compose2.yml",
+		"/Users/diek/code/web_micro_app/project/config2.py",
+		"/Users/diek/code/web_micro_app/project/__init__2.py",
+		"/Users/diek/code/web_micro_app/project/db/create.sql",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/README.md",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/emailtemplate/settings.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/templates/main/email.txt",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/templates/main/email.html",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/x.txt",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/.gitignore",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/templates/base.html",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/main/urls.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/main/templates/main/index.html",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/main/templates/base.html",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/emailtemplate/urls.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/emailtemplate/wsgi.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/manage.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/static/css/bootstrap.min.css",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/requirements.txt",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/main/migrations/__init__.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/emailtemplate/settings.old.py",
+		"/Users/diek/code/github_projects/episode-19-using-templates-for-sending-emails/main/apps.py",
+		"/Users/diek/work/tracker/employees/models.py",
+		"/Users/diek/work/Email.txt",
+		"/Users/diek/work/issa/issa/models.py",
+		"/Users/diek/work/issa/schedule/config.py",
+		"/Users/diek/work/issa/schedule/views.py",
+		"/Users/diek/work/issa/templates/schedule/store_schedule_email.html",
+		"/Users/diek/work/issa/templates/schedule/store_schedule.html",
+		"/Users/diek/work/issa/requirements.txt",
+		"/Users/diek/work/issa/templates/schedule/schedule_email_inline.html",
+		"/Users/diek/work/issa/schedule/urls.py",
+		"/Users/diek/work/issa/schedule/forms.py",
+		"/Users/diek/work/issa/requirments.txt",
+		"/Users/diek/work/issa/templates/schedule/schedule_email_inline2.html",
+		"/Users/diek/work/issa/templates/schedule/schedule_email.html",
+		"/Users/diek/work/issa/schedule/management/commands/send_store_schedules.py",
+		"/Users/diek/work/issa/schedule/management/commands/send_no_show_emails.py",
+		"/Users/diek/work/issa/templates/schedule/schedule_email.txt",
+		"/Users/diek/work/issa/templates/schedule/store_schedules.html",
+		"/Users/diek/work/issa/schedule/management/commands/__init__.py",
+		"/Users/diek/work/issa/schedule/management/__init__.py",
+		"/Users/diek/work/issa/templates/schedule/store_schedules.bak",
+		"/Users/diek/work/issa/schedule/models.py",
+		"/Users/diek/work/issa/issa/middleware.py",
+		"/Users/diek/code/web_apps/countries_master_detail/county_info/countries/models.py",
+		"/Users/diek/code/web_apps/countries_master_detail/county_info/countries/models2.py",
+		"/Users/diek/code/web_apps/countries_master_detail/county_info/countries/urls.py",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/AutoPep8.sublime-settings",
+		"/Users/diek/code/web_apps/django-locallibrary-tutorial/locallibrary/settings.bak",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/Users/diek/code/web_apps/django-locallibrary-tutorial/requirements.txt",
+		"/Users/diek/Documents/WhatsApp 19Aug.txt",
+		"/Users/diek/Documents/Tatiane/Tatiane_WhatsApp_30Nov2016.txt",
+		"/Users/diek/Google Drive/Correspondence/whatsapp_10Aug.txt",
+		"/Users/diek/Google Drive/Correspondence/Telegram_2016.09.04_discussion of visiting.txt",
+		"/Users/diek/Google Drive/@Tatiane_Marcelo_PermRes/Completed/Letters and Messages/telegram_chat_history__Jul_Oct_2016.txt",
+		"/Users/diek/Google Drive/Correspondence/Telegram_2016.09.03_discussion of visiting.txt",
+		"/Users/diek/Google Drive/Correspondence/Telegram_2016.08.27_very private discussion.txt",
+		"/Users/diek/Google Drive/Correspondence/Telegram_08.09.2016_Nice Poem.txt",
+		"/Users/diek/Google Drive/Correspondence/WhatsApp 19Aug.txt",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/books.csv",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/authors.csv",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/authors.sql",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/books.sql",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/shat.tmp",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/books.xlsx",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/shat/util.py",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/shat/models.py",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/LocalLibrary/settings.py",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/requirements.txt",
+		"/Users/diek/Library/Application Support/Sublime Text 3/Packages/User/Flake8Lint.sublime-settings",
+		"/Users/diek/code/web_apps/moz_django/LocalLibrary/.flake8",
+		"/Users/diek/jun_hist.txt",
+		"/Users/diek/Google Drive/Correspondence/Todo.txt",
+		"/Users/diek/Google Drive/Correspondence/WhatsApp_02Sep_DIscussingMarriage.txt",
+		"/Users/diek/Google Drive/Correspondence/WhatsApp_23Aug_DIscussing Visit.txt",
+		"/Users/diek/Google Drive/Correspondence/WhatsApp_25Aug_DIscussing Visit.txt",
+		"/Users/diek/Documents/WhatsApp Chat_edit.txt",
+		"/Users/diek/Documents/transferwise.txt",
+		"/Users/diek/Documents/WhatsApp Chat - Tatiane Maria de Almeida Kearney.txt",
+		"/Users/diek/Documents/Interpals Penpals - tatianem profile.pdf",
+		"/Users/diek/projects/memcache_ex/memcache1.py",
+		"/Users/diek/projects/memcache_ex/c_example.cpp",
+		"/Users/diek/projects/memcache_ex/api.cpp",
+		"/Users/diek/projects/memcache_ex/mem.java",
+		"/Users/diek/.zshrc",
+		"/Users/diek/work/tracker/requirements.txt",
+		"/Users/diek/work/tracker/tracker/settings.py",
+		"/Users/diek/work/tracker/.gitignore",
+		"/Users/diek/.gitconfig",
+		"/Users/diek/work/tracker/tracker/wsgi.py",
+		"/Users/diek/work/tracker/Procfile",
+		"/Users/diek/work/tracker/runtime.txt",
+		"/Users/diek/work/tracker/.env",
+		"/Users/diek/code/back_to_basics/j_data2.py",
+		"/Users/diek/code/back_to_basics/overloaded_thoughts.py",
+		"/Users/diek/.history",
+		"/Users/diek/Google Drive/@Tatiane_Marcelo_PermRes/Derrick_Family.txt",
+		"/Users/diek/code/jquery_coding/@learn_shayhowe/scrap.js",
+		"/Users/diek/code/jquery_coding/@learn_shayhowe/myStyle.css",
+		"/Users/diek/work/issa/readme.md",
+		"/Users/diek/Documents/dave and carol",
+		"/Users/diek/code/course_work/@Intro to CSS3/scrap/scrap.html",
+		"/Users/diek/work/issa/templates/schedule/report.html",
+		"/Users/diek/work/issa/schedule/static/schedule/js/display_detail.js"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 115.0,
+		"where_history":
+		[
+			"/Users/diek/code/web_micro_app",
+			"/Users/diek/code/web_micro_app/project",
+			"/Users/diek/work",
+			"/Users/diek/work/issa",
+			"/Users/work/issa",
+			"/Users/diek/code/web_apps/django-locallibrary-tutorial",
+			"/Users/diek/code/web_apps/moz_django/LocalLibrary",
+			"/Users/diek/work/issa",
+			"/Users/diek",
+			"/Users/diek/work",
+			"/Users/diek/work/issa"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"APP_SETTINGS",
+			"SQLALCHEMY_DATABASE_URI",
+			"EMAIL_BACKEND",
+			"Choice",
+			"json",
+			"store_schedules",
+			"serialize",
+			"print",
+			"initial",
+			"send_no_show_email",
+			"mail",
+			"send_mail",
+			"email",
+			"send_mail",
+			"schedule",
+			"catalog_author",
+			"LocalLibrary",
+			"visit",
+			"visa",
+			"Estrela",
+			"stars",
+			"Butterflies",
+			"'s death",
+			"'s birthday",
+			"'s",
+			" birthday",
+			" ",
+			"February",
+			"September",
+			"November",
+			"January",
+			"July",
+			"May",
+			"th",
+			"st",
+			"nd",
+			",\\n",
+			",/n",
+			"by ",
+			"author of ",
+			"-",
+			"tracker",
+			"HttpResponseRedirect",
+			"form",
+			"staff_member_required",
+			"honcho",
+			"Visit",
+			"Porto",
+			"love",
+			"Cachorro",
+			"Dog",
+			"love",
+			"current_price",
+			"max_profit",
+			"radio",
+			"puncher",
+			"enable_nav",
+			"previous_link",
+			"querydict",
+			"previous",
+			"nested_admin",
+			"Previous",
+			"current",
+			"employees",
+			"get_shifts",
+			"complet",
+			",",
+			"</option>",
+			"\">",
+			"<option value=\"",
+			"\\t",
+			"user",
+			"DateTimeRange",
+			"POST",
+			"admin-location-google-maps",
+			"form",
+			"accordion",
+			"postion",
+			"django_extensions"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"shift",
+			"locallibrary",
+			"",
+			"-",
+			"02",
+			"09",
+			"11",
+			"01",
+			"07",
+			"05",
+			"",
+			"\\n",
+			"",
+			",",
+			"stock_price",
+			"best_profit",
+			"selected_employee",
+			"",
+			",\\t",
+			"",
+			"GET"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/diek/code/web_micro_app/project/api/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								581,
+								581
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/diek/code/web_micro_app/manage.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/diek/code/web_micro_app/project/tests/test_users.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1424,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "web_micro_app.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"issform",
+				"issa/forms.py"
+			],
+			[
+				"sett",
+				"node_modules/lodash/_setToArray.js"
+			],
+			[
+				".env",
+				".env"
+			],
+			[
+				"man",
+				"manage.py"
+			],
+			[
+				"scvi",
+				"schedule/views.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

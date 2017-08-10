@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Anaconda",
+		"Djaneiro",
+		"Dockerfile Syntax Highlighting",
+		"Emmet",
+		"GitGutter",
+		"Grandson-of-Obsidian",
+		"isort",
+		"Markdown Preview",
+		"Package Control",
+		"Paste as Column",
+		"requirementstxt",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
+		"Sublimerge 3",
+		"Terminal",
+		"Theme - Flatland",
+		"TrailingSpaces",
+		"TransposeCharacter",
+		"Zen Tabs"
+	]
+}
